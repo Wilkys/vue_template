@@ -1,25 +1,25 @@
 <template>
-  <button @click="handler">
-    Click me!
-  </button>
-  <h1 v-show="isShow">
-    Hello?!
-  </h1>
+	<HelloWorld />
 </template>
 
 <script>
+import HelloWorld from "~/components/HelloWorld";
+
 export default {
+  components: {
+    HelloWorld,
+  },
   data() {
     return {
       isShow: false,
-      count: 0
-    }
+      count: 0,
+    };
   },
-  methods:{
+  methods: {
     handler() {
-      this.isShow = !this.isShow
-      this.count += 1
-    }
-  }
-}
+      this.isShow = !this.isShow;
+      this.count += 1;
+    },
+  },
+};
 </script>
